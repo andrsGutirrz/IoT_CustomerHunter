@@ -1,4 +1,8 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Plano.gd" type="Script" id=1]
+[ext_resource path="res://Images/mall.jpg" type="Texture" id=2]
+[ext_resource path="res://Images/hunter.png" type="Texture" id=3]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -7,6 +11,7 @@ offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+script = ExtResource( 1 )
 
 [node name="ColorRect" type="ColorRect" parent="." index="0"]
 
@@ -14,14 +19,158 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 1019.0
-margin_bottom = 595.0
+margin_left = -1.0
+margin_top = -1.0
+margin_right = 1377.0
+margin_bottom = 775.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-color = Color( 1, 1, 1, 1 )
+color = Color( 0.929412, 0.933333, 0.941176, 1 )
+
+[node name="Sprite" type="Sprite" parent="." index="1"]
+
+position = Vector2( 680.006, 353.982 )
+scale = Vector2( 0.318869, 0.317386 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="a" type="Button" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 458.0
+margin_top = 301.0
+margin_right = 527.0
+margin_bottom = 365.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+icon = ExtResource( 3 )
+flat = false
+align = 1
+
+[node name="b" type="Button" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 114.0
+margin_top = 422.0
+margin_right = 183.0
+margin_bottom = 486.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+icon = ExtResource( 3 )
+flat = false
+align = 1
+
+[node name="c" type="Button" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 575.0
+margin_top = 604.0
+margin_right = 644.0
+margin_bottom = 668.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+icon = ExtResource( 3 )
+flat = false
+align = 1
+
+[node name="d" type="Button" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 854.0
+margin_top = 425.0
+margin_right = 923.0
+margin_bottom = 489.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+icon = ExtResource( 3 )
+flat = false
+align = 1
+
+[node name="e" type="Button" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 546.0
+margin_top = 55.0
+margin_right = 615.0
+margin_bottom = 119.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+icon = ExtResource( 3 )
+flat = false
+align = 1
+
+[connection signal="pressed" from="a" to="." method="_on_Button_pressed"]
+
+[connection signal="pressed" from="b" to="." method="_on_Button_pressed"]
+
+[connection signal="pressed" from="c" to="." method="_on_Button_pressed"]
+
+[connection signal="pressed" from="d" to="." method="_on_Button_pressed"]
+
+[connection signal="pressed" from="e" to="." method="_on_Button_pressed"]
 
 
