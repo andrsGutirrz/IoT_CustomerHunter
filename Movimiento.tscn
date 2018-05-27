@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://Images/TimmyBody.png" type="Texture" id=2]
+
+[node name="Node" type="Node" index="0"]
+
+[node name="Persona" type="KinematicBody2D" parent="." index="0"]
+
+position = Vector2( 593.95, 318.285 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Persona" index="0"]
+
+position = Vector2( 9.45203, -12.2814 )
+scale = Vector2( 0.214378, 0.200333 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Persona" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -33.2795, -27.3577, -20.9658, -69.4624, -15.8021, -71.4484, -14.6105, -64.6958, -13.816, -60.7237, -1.89954, -64.6958, 13.1946, -69.0652, 19.55, -69.0652, 14.3862, -63.9014, 23.1249, -63.5042, 33.4525, -63.1069, 45.7661, -60.3264, 56.491, -49.6017, 59.2714, -42.4518, 60.8603, -34.9047, 49.7383, -39.2741, 44.5745, -40.0685, 43.3828, -33.3159, 50.1355, -21.0022, 44.5745, -9.48303, 40.9996, -0.347076, 25.111, 8.39163, 15.9751, 13.9526, 10.8113, 15.9387, 12.0029, 29.444, 13.5918, 40.1688, 15.5779, 43.7437, 12.7974, 46.9214, 3.66138, 46.127, -2.29675, 46.127, -9.44666, 44.1409, -6.26892, 37.7855, -8.65222, 34.2106, -13.816, 30.2384, -12.2272, 23.0886, -9.44666, 20.308, -6.26892, 22.6913, -4.68005, 16.3359, -3.09119, 11.9666, -6.26892, 8.78885, -9.44666, 4.02228, -17.3909, 4.02228, -23.3491, 0.447327, -20.9658, -9.88022, -15.8021, -9.88022, -18.9798, -13.4551, -21.7603, -15.4412, -27.7185, -11.8663, -30.499, -12.2635, -34.8683, -16.2357, -36.8544, -24.1799 )
+
+

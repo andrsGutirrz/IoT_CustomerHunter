@@ -1,6 +1,32 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Home.gd" type="Script" id=1]
+[ext_resource path="res://Fuentes/ka1.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Fuentes/Alien-Encounters-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 34
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 52
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 50
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Resource", "Settings" ]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -10,6 +36,10 @@ rotation = 0.0
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 373.416 ],
+"_edit_vertical_guides_": [ 686.69 ]
+}
 
 [node name="ColorRect" type="ColorRect" parent="." index="0"]
 
@@ -17,10 +47,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
+margin_top = 8.0
 margin_right = 1360.0
-margin_bottom = 763.0
+margin_bottom = 771.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
@@ -33,17 +63,17 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 457.0
-margin_top = 461.0
-margin_right = 583.0
-margin_bottom = 531.0
+margin_left = 459.0
+margin_top = 563.0
+margin_right = 902.0
+margin_bottom = 716.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_fonts/font = SubResource( 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -51,6 +81,73 @@ group = null
 text = "Iniciar Simulacion"
 flat = false
 align = 1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Titulo" type="Label" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 359.0
+margin_top = 52.0
+margin_right = 1007.0
+margin_bottom = 123.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "Customer Hunter"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Andres" type="Label" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 860.0
+margin_top = 248.0
+margin_right = 1345.0
+margin_bottom = 303.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+text = "Andres Gutierrez"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Ema" type="Label" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 861.0
+margin_top = 363.0
+margin_right = 1346.0
+margin_bottom = 418.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+text = "Emanuel Nino"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 

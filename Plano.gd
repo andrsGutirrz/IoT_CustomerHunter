@@ -16,3 +16,7 @@ func _ready():
 
 func _on_Button_pressed():
 	get_tree().change_scene("res://Hunter.tscn")
+
+
+func _on_Atras_pressed():
+	get_tree().change_scene("res://Home.tscn")
