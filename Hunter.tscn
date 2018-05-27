@@ -5,7 +5,7 @@
 [ext_resource path="res://Tarjeta.tscn" type="PackedScene" id=3]
 [ext_resource path="res://celular.tscn" type="PackedScene" id=4]
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -118,6 +118,8 @@ align = 1
 position = Vector2( 78.1186, 301.249 )
 
 [connection signal="pressed" from="Atras" to="." method="_on_Atras_pressed"]
+
+[connection signal="pressed" from="Enviar" to="." method="_on_Enviar_pressed"]
 
 [connection signal="pressed" from="Celular" to="." method="_on_Celular_pressed"]
 
