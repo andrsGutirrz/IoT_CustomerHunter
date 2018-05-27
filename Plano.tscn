@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Plano.gd" type="Script" id=1]
 [ext_resource path="res://Images/mall.jpg" type="Texture" id=2]
 [ext_resource path="res://Images/hunter.png" type="Texture" id=3]
+[ext_resource path="res://testMover.tscn" type="PackedScene" id=4]
 
-[node name="CanvasLayer" type="CanvasLayer" index="0"]
+[node name="CanvasLayer" type="CanvasLayer"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -180,6 +181,11 @@ group = null
 text = "Atras"
 flat = false
 align = 1
+
+[node name="Persona" parent="." index="8" instance=ExtResource( 4 )]
+
+position = Vector2( 253.382, 96.3847 )
+scale = Vector2( 0.515077, 0.515077 )
 
 [connection signal="pressed" from="a" to="." method="_on_Button_pressed"]
 

@@ -1,21 +1,17 @@
-extends ColorRect
+extends Node
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
 
 func _ready():
-	$tarjeta.hide()
+	$TarjetaPic.hide()	
+	$CelularPic.hide()
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func _on_Tarjeta_pressed():
+	$CelularPic.hide()
+	$TarjetaPic.show()
 
-
-func _on_Button_pressed():
+func _on_Atras_pressed():
 	get_tree().change_scene("res://Plano.tscn")
 
-
-func _on_btnTarjeta_pressed():
-	$tarjeta.show()
+func _on_Celular_pressed():
+	$TarjetaPic.hide()
+	$CelularPic.show()

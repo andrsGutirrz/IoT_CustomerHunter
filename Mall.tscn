@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://testMover.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Images/hunter.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 15.268, 18.037 )
+
+[node name="Node" type="Node"]
+
+[node name="Persona" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 451.901, 396.11 )
+
+[node name="Hunter" type="StaticBody2D" parent="." index="1"]
+
+position = Vector2( 727.944, 354.268 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Hunter" index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hunter" index="1"]
+
+position = Vector2( 1.18478, 0.811756 )
+scale = Vector2( 1.6703, 1.32992 )
+shape = SubResource( 1 )
+
+
