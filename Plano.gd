@@ -9,10 +9,13 @@ func _ready():
 	# Initialization here
 	pass
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func _process(delta):
+	$L1.play()
+	$L2.play()
+	$L3.play()
+	$L4.play()
+	$L5.play()
+	$L6.play()
 
 func _on_Button_pressed():
 	get_tree().change_scene("res://Hunter.tscn")

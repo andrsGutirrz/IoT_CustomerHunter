@@ -1,11 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Hunter.gd" type="Script" id=1]
 [ext_resource path="res://Images/HunterDevice.png" type="Texture" id=2]
 [ext_resource path="res://Tarjeta.tscn" type="PackedScene" id=3]
 [ext_resource path="res://celular.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Images/pantalla.png" type="Texture" id=5]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -117,6 +118,19 @@ align = 1
 
 position = Vector2( 78.1186, 301.249 )
 
+[node name="Pantalla" type="Sprite" parent="." index="7"]
+
+position = Vector2( 683.414, 428.756 )
+scale = Vector2( 0.600005, 0.710818 )
+texture = ExtResource( 5 )
+
+[node name="tiempo" type="Timer" parent="." index="8"]
+
+process_mode = 1
+wait_time = 10.0
+one_shot = true
+autostart = true
+
 [connection signal="pressed" from="Atras" to="." method="_on_Atras_pressed"]
 
 [connection signal="pressed" from="Enviar" to="." method="_on_Enviar_pressed"]
@@ -124,5 +138,7 @@ position = Vector2( 78.1186, 301.249 )
 [connection signal="pressed" from="Celular" to="." method="_on_Celular_pressed"]
 
 [connection signal="pressed" from="Tarjeta" to="." method="_on_Tarjeta_pressed"]
+
+[connection signal="timeout" from="tiempo" to="." method="_on_tiempo_timeout"]
 
 

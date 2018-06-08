@@ -2,8 +2,12 @@ extends Node
 
 
 func _ready():
-	$TarjetaPic.hide()	
+	$TarjetaPic.hide()
 	$CelularPic.hide()
+	$Pantalla.show()
+	
+func _process(delta):
+	pass
 
 func _on_Tarjeta_pressed():
 	$CelularPic.hide()
@@ -19,3 +23,7 @@ func _on_Celular_pressed():
 
 func _on_Enviar_pressed():
 	get_tree().change_scene("res://NodoNotificacion.tscn")
+
+
+func _on_tiempo_timeout():	
+	$Pantalla.hide()

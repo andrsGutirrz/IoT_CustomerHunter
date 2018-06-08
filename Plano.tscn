@@ -1,9 +1,22 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Plano.gd" type="Script" id=1]
 [ext_resource path="res://Images/mall.jpg" type="Texture" id=2]
 [ext_resource path="res://Images/hunter.png" type="Texture" id=3]
 [ext_resource path="res://testMover.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Images/signal.png" type="Texture" id=5]
+[ext_resource path="res://Images/antenna.png" type="Texture" id=6]
+[ext_resource path="res://Images/1.png" type="Texture" id=7]
+[ext_resource path="res://Images/2.png" type="Texture" id=8]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -33,7 +46,7 @@ color = Color( 0.929412, 0.933333, 0.941176, 1 )
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
-position = Vector2( 680.006, 353.982 )
+position = Vector2( 680.006, 354.982 )
 scale = Vector2( 0.318869, 0.317386 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Offset", "Region", "Transform" ]
@@ -186,6 +199,84 @@ align = 1
 
 position = Vector2( 253.382, 96.3847 )
 scale = Vector2( 0.515077, 0.515077 )
+
+[node name="W1" type="Sprite" parent="." index="9"]
+
+position = Vector2( 193.049, 401.154 )
+scale = Vector2( 0.10878, 0.10878 )
+texture = ExtResource( 5 )
+
+[node name="W2" type="Sprite" parent="." index="10"]
+
+position = Vector2( 631.685, 54.9434 )
+scale = Vector2( 0.10878, 0.10878 )
+texture = ExtResource( 5 )
+
+[node name="W3" type="Sprite" parent="." index="11"]
+
+position = Vector2( 607.568, 580.527 )
+scale = Vector2( 0.10878, 0.10878 )
+texture = ExtResource( 5 )
+
+[node name="W4" type="Sprite" parent="." index="12"]
+
+position = Vector2( 539.737, 288.103 )
+scale = Vector2( 0.10878, 0.10878 )
+texture = ExtResource( 5 )
+
+[node name="W5" type="Sprite" parent="." index="13"]
+
+position = Vector2( 940.69, 407.183 )
+scale = Vector2( 0.10878, 0.10878 )
+texture = ExtResource( 5 )
+
+[node name="Antenna" type="Sprite" parent="." index="14"]
+
+position = Vector2( 1237.27, 500.376 )
+scale = Vector2( 0.238674, 0.238674 )
+texture = ExtResource( 6 )
+
+[node name="L1" type="AnimatedSprite" parent="." index="15"]
+
+position = Vector2( 631.671, 69.8077 )
+scale = Vector2( 0.272858, 0.272858 )
+frames = SubResource( 1 )
+animation = "default"
+
+[node name="L2" type="AnimatedSprite" parent="." index="16"]
+
+position = Vector2( 941.06, 420.485 )
+scale = Vector2( 0.272858, 0.272858 )
+frames = SubResource( 1 )
+animation = "default"
+
+[node name="L3" type="AnimatedSprite" parent="." index="17"]
+
+position = Vector2( 606.888, 596.507 )
+scale = Vector2( 0.272858, 0.272858 )
+frames = SubResource( 1 )
+animation = "default"
+
+[node name="L4" type="AnimatedSprite" parent="." index="18"]
+
+position = Vector2( 193.368, 414.802 )
+scale = Vector2( 0.272858, 0.272858 )
+frames = SubResource( 1 )
+animation = "default"
+
+[node name="L5" type="AnimatedSprite" parent="." index="19"]
+
+position = Vector2( 539.59, 304.306 )
+scale = Vector2( 0.272858, 0.272858 )
+frames = SubResource( 1 )
+animation = "default"
+
+[node name="L6" type="AnimatedSprite" parent="." index="20"]
+
+position = Vector2( 1237.03, 465.742 )
+scale = Vector2( 0.410319, 0.410319 )
+frames = SubResource( 1 )
+animation = "default"
 
 [connection signal="pressed" from="a" to="." method="_on_Button_pressed"]
 
