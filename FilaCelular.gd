@@ -12,9 +12,6 @@ func _ready():
 #	# Update game logic here.
 #	pass
 
+
 func _on_Button_pressed():
-	get_tree().change_scene("res://CinepolisNotifica.tscn")
-
-
-func _on_goBack_pressed():
-	get_tree().change_scene("res://NodoNotificacion.tscn")
+	get_tree().change_scene("res://FilaSuperMercado.tscn")

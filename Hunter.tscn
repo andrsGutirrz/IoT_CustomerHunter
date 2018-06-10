@@ -1,12 +1,39 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Hunter.gd" type="Script" id=1]
 [ext_resource path="res://Images/HunterDevice.png" type="Texture" id=2]
 [ext_resource path="res://Tarjeta.tscn" type="PackedScene" id=3]
 [ext_resource path="res://celular.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Images/pantalla.png" type="Texture" id=5]
+[ext_resource path="res://Images/signal.png" type="Texture" id=6]
+[ext_resource path="res://Images/signal1.png" type="Texture" id=7]
+[ext_resource path="res://Images/signal2.png" type="Texture" id=8]
+[ext_resource path="res://Images/signal3.png" type="Texture" id=9]
+[ext_resource path="res://Images/1.png" type="Texture" id=10]
+[ext_resource path="res://Images/2.png" type="Texture" id=11]
+[ext_resource path="res://Images/camara.png" type="Texture" id=12]
+[ext_resource path="res://Sonido/Bienvenido.ogg" type="AudioStream" id=13]
+[ext_resource path="res://Images/parlante.png" type="Texture" id=14]
 
-[node name="Node" type="Node" index="0"]
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Node" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -114,6 +141,8 @@ align = 1
 
 [node name="TarjetaPic" parent="." index="5" instance=ExtResource( 3 )]
 
+position = Vector2( 176.834, 79.8752 )
+
 [node name="CelularPic" parent="." index="6" instance=ExtResource( 4 )]
 
 position = Vector2( 78.1186, 301.249 )
@@ -131,6 +160,136 @@ wait_time = 10.0
 one_shot = true
 autostart = true
 
+[node name="wifi" type="AnimatedSprite" parent="." index="9"]
+
+position = Vector2( 996.942, 122.769 )
+scale = Vector2( 0.239633, 0.239633 )
+frames = SubResource( 1 )
+animation = "default"
+
+[node name="luz" type="AnimatedSprite" parent="." index="10"]
+
+position = Vector2( 996.61, 155.11 )
+scale = Vector2( 0.521874, 0.521874 )
+frames = SubResource( 2 )
+animation = "default"
+
+[node name="Camara" type="Sprite" parent="." index="11"]
+
+position = Vector2( 756.478, 196.083 )
+scale = Vector2( 0.373832, 0.373832 )
+texture = ExtResource( 10 )
+
+[node name="Button" type="Button" parent="Camara" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -226.0
+margin_top = -82.0
+margin_right = -91.0
+margin_bottom = 47.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+icon = ExtResource( 12 )
+flat = false
+align = 1
+
+[node name="Sonido" type="AudioStreamPlayer" parent="." index="12"]
+
+stream = ExtResource( 13 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Cam" type="Sprite" parent="." index="13"]
+
+position = Vector2( 552.56, 671.035 )
+scale = Vector2( 0.129536, 0.129536 )
+texture = ExtResource( 14 )
+
+[node name="PlayButton" type="Button" parent="." index="14"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 527.0
+margin_top = 718.0
+margin_right = 582.0
+margin_bottom = 738.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Sonido"
+flat = false
+align = 1
+
+[node name="StopButton" type="Button" parent="." index="15"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 527.0
+margin_top = 744.0
+margin_right = 582.0
+margin_bottom = 764.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "SonidoStop"
+flat = false
+align = 1
+
+[node name="fila" type="Button" parent="." index="16"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1169.0
+margin_top = 627.0
+margin_right = 1254.0
+margin_bottom = 665.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Filas"
+flat = false
+align = 1
+
 [connection signal="pressed" from="Atras" to="." method="_on_Atras_pressed"]
 
 [connection signal="pressed" from="Enviar" to="." method="_on_Enviar_pressed"]
@@ -140,5 +299,13 @@ autostart = true
 [connection signal="pressed" from="Tarjeta" to="." method="_on_Tarjeta_pressed"]
 
 [connection signal="timeout" from="tiempo" to="." method="_on_tiempo_timeout"]
+
+[connection signal="pressed" from="Camara/Button" to="." method="_on_Button_pressed"]
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
+
+[connection signal="pressed" from="StopButton" to="." method="_on_StopButton_pressed"]
+
+[connection signal="pressed" from="fila" to="." method="_on_fila_pressed"]
 
 

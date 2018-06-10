@@ -1,8 +1,21 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://NodoNotificacion.gd" type="Script" id=1]
 [ext_resource path="res://Images/toys.png" type="Texture" id=2]
 [ext_resource path="res://Images/telefonoToys.png" type="Texture" id=3]
+[ext_resource path="res://Images/signal.png" type="Texture" id=4]
+[ext_resource path="res://Images/signal1.png" type="Texture" id=5]
+[ext_resource path="res://Images/signal2.png" type="Texture" id=6]
+[ext_resource path="res://Images/signal3.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="NodoNotificacion" type="Node"]
 
@@ -19,7 +32,6 @@ margin_top = 2.0
 margin_right = 1364.0
 margin_bottom = 770.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
@@ -51,7 +63,6 @@ margin_top = 556.0
 margin_right = 1265.0
 margin_bottom = 660.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -77,7 +88,6 @@ margin_top = 540.0
 margin_right = 334.0
 margin_bottom = 629.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -90,6 +100,13 @@ group = null
 text = "Atrás"
 flat = false
 align = 1
+
+[node name="wifi" type="AnimatedSprite" parent="." index="5"]
+
+position = Vector2( 1026.26, 145.36 )
+scale = Vector2( 0.25108, 0.25108 )
+frames = SubResource( 1 )
+animation = "default"
 
 [connection signal="pressed" from="irGollo" to="." method="_on_Button_pressed"]
 

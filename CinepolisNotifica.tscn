@@ -1,9 +1,21 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://CinepolisNotifica.gd" type="Script" id=1]
 [ext_resource path="res://Images/cinepolis.png" type="Texture" id=2]
 [ext_resource path="res://Images/telefonoCinepolisNuevo2.png" type="Texture" id=3]
+[ext_resource path="res://Images/signal.png" type="Texture" id=4]
+[ext_resource path="res://Images/signal1.png" type="Texture" id=5]
+[ext_resource path="res://Images/signal2.png" type="Texture" id=6]
+[ext_resource path="res://Images/signal3.png" type="Texture" id=7]
 
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="CinepolisNotifica" type="Node"]
 
@@ -61,6 +73,13 @@ group = null
 text = "Atrás"
 flat = false
 align = 1
+
+[node name="wifi" type="AnimatedSprite" parent="." index="4"]
+
+position = Vector2( 1029.61, 109.068 )
+scale = Vector2( 0.214368, 0.214368 )
+frames = SubResource( 1 )
+animation = "default"
 
 [connection signal="pressed" from="goBack" to="." method="_on_goBack_pressed"]
 

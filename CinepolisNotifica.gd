@@ -5,9 +5,7 @@ extends Node
 # var b = "textvar"
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	pass
+	$wifi.play()
 
 func _on_goBack_pressed():
 	get_tree().change_scene("res://GolloNotifica.tscn")
