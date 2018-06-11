@@ -74,9 +74,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 1171.0
-margin_top = 693.0
-margin_right = 1255.0
-margin_bottom = 736.0
+margin_top = 689.0
+margin_right = 1264.0
+margin_bottom = 724.0
 rect_pivot_offset = Vector2( 0, 0 )
 focus_mode = 2
 mouse_filter = 0
@@ -274,8 +274,8 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 1169.0
 margin_top = 627.0
-margin_right = 1254.0
-margin_bottom = 665.0
+margin_right = 1265.0
+margin_bottom = 664.0
 rect_pivot_offset = Vector2( 0, 0 )
 focus_mode = 2
 mouse_filter = 0
@@ -287,6 +287,30 @@ enabled_focus_mode = 2
 shortcut = null
 group = null
 text = "Filas"
+flat = false
+align = 1
+
+[node name="Sensor Humo" type="Button" parent="." index="17"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1167.0
+margin_top = 573.0
+margin_right = 1265.0
+margin_bottom = 608.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Sensor Humo"
 flat = false
 align = 1
 
@@ -307,5 +331,7 @@ align = 1
 [connection signal="pressed" from="StopButton" to="." method="_on_StopButton_pressed"]
 
 [connection signal="pressed" from="fila" to="." method="_on_fila_pressed"]
+
+[connection signal="pressed" from="Sensor Humo" to="." method="_on_Sensor_Humo_pressed"]
 
 

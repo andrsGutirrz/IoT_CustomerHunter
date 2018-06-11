@@ -49,3 +49,7 @@ func _on_StopButton_pressed():
 
 func _on_fila_pressed():
 	get_tree().change_scene("res://FilaSuperMercado.tscn")
+
+
+func _on_Sensor_Humo_pressed():
+	get_tree().change_scene("res://Humo.tscn")
